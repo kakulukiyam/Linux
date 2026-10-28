@@ -208,7 +208,7 @@ jobs:
           terraform_wrapper: false
 
       - name: terraform init, fmt y validate (¿está bien escrito?)
-        working-directory: "./terraform"
+        working-directory: "tienda-laura-cicd/terraform"
         run: |
           terraform init -input=false -backend-config=backend.hcl
           terraform fmt -check -diff
