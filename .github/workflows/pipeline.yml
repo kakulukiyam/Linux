@@ -223,6 +223,8 @@ jobs:
 
       - name: terraform init, fmt y validate (¿está bien escrito?)
         working-directory: "tienda-laura-cicd/terraform"
+        env:
+          TF_VAR_correo: $${{ secrets.CORREO }}
         run: |
           terraform init -input=false -backend-config=backend.hcl
           terraform fmt -check -diff
