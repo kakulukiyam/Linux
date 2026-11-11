@@ -53,6 +53,7 @@ resource "aws_sns_topic_subscription" "correo" {
 
 # ======================= LAS ALARMAS ===================================
 # 4 · Se cayó: la Lambda tuvo 1 error o más en el último minuto
+/*
 resource "aws_cloudwatch_metric_alarm" "se_cayo" {
   alarm_name          = "tienda-cicd-se-cayo"
   alarm_description   = "La Lambda de la tienda está fallando: hay pedidos que no se cobran"
@@ -87,7 +88,7 @@ resource "aws_cloudwatch_metric_alarm" "lenta" {
   alarm_actions       = [aws_sns_topic.alertas.arn]
   ok_actions          = [aws_sns_topic.alertas.arn]
 }
-
+*/
 # ======================= LAS PREGUNTAS GUARDADAS =======================
 # 6 · Consultas de Logs Insights listas para usar (Logs Insights → Consultas guardadas)
 resource "aws_cloudwatch_query_definition" "ultimos" {
