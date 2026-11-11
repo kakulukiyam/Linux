@@ -53,7 +53,6 @@ resource "aws_sns_topic_subscription" "correo" {
 
 # ======================= LAS ALARMAS ===================================
 # 4 · Se cayó: la Lambda tuvo 1 error o más en el último minuto
-
 resource "aws_cloudwatch_metric_alarm" "se_cayo" {
   alarm_name          = "tienda-cicd-se-cayo"
   alarm_description   = "La Lambda de la tienda está fallando: hay pedidos que no se cobran"
